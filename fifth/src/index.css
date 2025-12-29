@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  /* Some v4 versions prefer this specific naming */
+  --dark-mode: class; 
+}
+
+/* Force the variant logic manually if the theme variable fails */
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    @apply transition-colors duration-300;
+  }
+}
