@@ -8,7 +8,7 @@ function TodoForm() {
     const add = (e) => {
         e.preventDefault()
         if(!todo) return
-        todoAdd({todo,completed:false})
+        todoAdd({todo,completed:false,})
         setTodo("")
     }
 
@@ -21,7 +21,7 @@ function TodoForm() {
                 value={todo}
                 onChange={(e) => setTodo(e.target.value)}
             />
-            <button type="submit" className="rounded-r-lg px-3 py-1 bg-green-600 text-white shrink-0">
+            <button type="submit" className="rounded-r-lg px-3 py-1 bg-green-600 text-white shrink-0 cursor-pointer">
                 Add
             </button>
         </form>

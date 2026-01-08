@@ -17,6 +17,8 @@ function App() {
   //   }
   // }, [])
 
+  // We have initialized all the functions and variables here so that is is accessible to provider (local to Provider)
+
   const todoAdd = (todo) => setTodos((prev) => [{id: Date.now(), ...todo}, ...prev])
 
   const todoUpdate = (todo, id) => setTodos((prev) => prev.map((prevtodo) => prevtodo.id === id ? todo : prevtodo ))

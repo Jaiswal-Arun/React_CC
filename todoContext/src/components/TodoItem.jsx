@@ -6,6 +6,7 @@ function TodoItem({ todo }) {
     const {todoToggle, todoDelete, todoUpdate} = useTodo()
    
     const [isTodoEditable, setIsTodoEditable] = useState(false)
+    
     const [todoMsg, setTodoMsg] = useState(todo.todo)
     
     const toggleCompleted = () => {
